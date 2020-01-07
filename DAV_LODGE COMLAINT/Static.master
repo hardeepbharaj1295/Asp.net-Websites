@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Static.master.cs" Inherits="Static" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-image: url('Images/Graphic2.JPG'); background-repeat: no-repeat">
+    <form id="form1" runat="server">
+    <div style="background-image: url(''); background-repeat: no-repeat; background-attachment: fixed">
+        <asp:Image ID="Image1" runat="server" Height="129px" 
+            ImageUrl="~/Images/swach-bharat-abhiyan.jpg" Width="1350px" />
+        <br />
+       
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+            
+            style="font-size: large; font-weight: 700; z-index: 1; left: 395px; top: 144px; position: absolute; height: 20px; width: 573px; background-color: #F8F9FA;">
+            <Items>
+                <asp:MenuItem Text="Home    |" Value="Home" Selected="True" 
+                    NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="About India    |" Value="About India" 
+                    NavigateUrl="~/Static_About_India.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="About DAV UNIVERSITY    |" Value="About DAV UNIVERSITY" 
+                    NavigateUrl="~/Static_DAV_.aspx">
+                </asp:MenuItem>
+                <asp:MenuItem Text="About US    |" Value="About US" 
+                    NavigateUrl="~/Static_About_US.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Suggest    |" Value="Suggest" 
+                    NavigateUrl="~/Static_Suggest.aspx"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/User_Status.aspx" Text="Status" Value="Status">
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>
+       
+        <br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

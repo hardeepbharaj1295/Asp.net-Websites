@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-image: url('Images/sb100.jpg')">
+    <form id="form1" runat="server">
+    <div>
+        <asp:Image ID="Image1" runat="server" Height="143px" 
+            ImageUrl="~/Images/sb78.jpg" Width="1346px" />
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+            style="font-size: large; font-weight: 700; z-index: 1; left: 454px; top: 151px; position: absolute; height: 20px; width: 456px; background-color: #F8F9FA;">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/Admin_Home.aspx" Text="Home |" Value="Home |">
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Admin_Complaints.aspx" Text="Complaints |" 
+                    Value="Complaints |"></asp:MenuItem>
+                <asp:MenuItem Text="Complaints History |" Value="Complaints History |" 
+                    NavigateUrl="~/Admin_Complaint_History.aspx">
+                </asp:MenuItem>
+                <asp:MenuItem Text="Suggestion Box" Value="Suggestion Box" 
+                    NavigateUrl="~/Suggestion_Box.aspx"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <strong>
+        <br />
+        </strong>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

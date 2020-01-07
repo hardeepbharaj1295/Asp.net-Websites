@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+ <title>Lab Diagnostics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Medicom Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/web.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/back-to-top.js" type="text/javascript"></script>
+	<!-- banner Slider starts Here -->
+					<script src="js/responsiveslides.min.js"></script>
+					 <script>
+					     // You can also use "$(window).load(function() {"
+					     $(function () {
+					         // Slideshow 4
+					         $("#slider3").responsiveSlides({
+					             auto: true,
+					             pager: false,
+					             nav: false,
+					             speed: 500,
+					             namespace: "callbacks",
+					             before: function () {
+					                 $('.events').append("<li>before event fired.</li>");
+					             },
+					             after: function () {
+					                 $('.events').append("<li>after event fired.</li>");
+					             }
+					         });
+
+					     });
+					  </script>
+					<!--//End-slider-script -->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<!----start-header---->
+<div class="header" id="home">
+	  <div class="container">
+			<div class="logo">
+				<a href="Default.aspx"><img src="images/logo-3.png" alt="" /></a>
+			</div>
+			<div class="menu">			
+			  <div class="top-menu navigation">
+				 <span class="menu"></span> 
+				 <ul class="navig">
+					 <li class="active"><a href="masterhome.aspx">Home</a></li>
+                     <li><a href="testRegister.aspx">Register Test</a></li>
+                     <li><a href="profile.aspx">Your Profile</a></li>
+                     <li><a href="report.aspx">Your Report</a></li>
+                     <li><a href="Donate.aspx">Donate Blood</a></li>
+					 <li><a href="logout.aspx"><i class="glyphicon glyphicon-log-out"></i>&nbsp;Logout</a></li>
+				 </ul>
+			  </div>
+			   <!-- script-for-menu -->
+		 <script>
+		     $("span.menu").click(function () {
+		         $(" ul.navig").slideToggle("slow", function () {
+		         });
+		     });
+		 </script>
+		 <!-- script-for-menu -->
+
+			</div>
+		  <div class="clearfix"></div>
+	 </div>	
+</div>
+<!----end-header---->
+    <form id="form1" runat="server">
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  
+    </form>
+   <!--footer-->
+<div class="footer">
+	  <div class="footer-grids">
+		  <div class="container">
+			 <div class="col-md-6 footer-grid">
+					<h4>More details</h4>
+					<ul>
+						<li><a href="About.aspx">About us</a></li>
+						<li><a href="Contact.aspx">Privacy Policy</a></li>
+						<li><a href="Contact.aspx">Terms & Condition</a></li>
+					</ul>
+			 </div>
+			 <div class="col-md-6 footer-grid contact-grid">
+					<h4>Contact us</h4>
+					<ul>
+						<li><span class="c-icon"> </span>Newyork Still Road.</li>
+						<li><span class="c-icon1"> </span><a href="mailto:info@example.com">mail@example.com</a></li>
+						<li><span class="c-icon2"> </span>756 gt globel Place</li>
+					</ul>
+					<ul class="social-icons">
+						<li><a href="#"><span class="facebook"> </span></a></li>
+						<li><a href="#"><span class="twitter"> </span></a></li>
+						<li><a href="#"><span class="thumb"> </span></a></li>
+					</ul>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<div class="copy">
+		 <p>Copyright &copy; 2018. All rights reserved | Website Designed and Maintained by <a href="#">Ajay and Sajan</a></p>
+ </div>
+ <!--footer-->		
+</body>
+</html>
