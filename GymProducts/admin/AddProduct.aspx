@@ -1,0 +1,119 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/MasterPage.master" AutoEventWireup="true" CodeFile="AddProduct.aspx.cs" Inherits="admin_AddProduct" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="row">
+	<div class="container"><br><br>
+    <h2>Add Menu Type</h2>
+    <form id="Form1" class="form-horizontal" runat="server">
+    	<div class="col-md-10 col-md-offset-1"><br><br>
+        	
+        	<div class="panel panel-primary">
+            	<div class="panel-heading">
+                	<div class="panel-title">Add Menu Type</div>
+                </div>
+                <div class="panel-body">
+                	
+            	        <div class="form-group">
+                	        <label class="control-label col-md-3" for="title">Select Menu Type</label>
+                            <div class="col-md-8">
+                                <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server" 
+                                    DataSourceID="SqlDataSource2" DataTextField="name" DataValueField="name">
+                                </asp:DropDownList>
+                    	        
+                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                                    SelectCommand="SELECT [name] FROM [category]"></asp:SqlDataSource>
+                    	        
+                            </div>
+                        </div>
+                        <div class="form-group">
+                	        <label class="control-label col-md-3" for="title">Product Name</label>
+                            <div class="col-md-8">
+                                <asp:TextBox ID="TextBox1" CssClass="form-control" placeholder="Enter Product Name"  required runat="server"></asp:TextBox>
+                    	    </div>
+                        </div>
+                
+                        <div class="form-group">
+                	        <label class="control-label col-md-3" for="title">Product Photo</label>
+                            <div class="col-md-8">
+                                <asp:FileUpload ID="FileUpload1" runat="server" />
+                    	       
+                            </div>
+                        </div>
+                        <div class="form-group">
+                	        <label class="control-label col-md-3" for="title">Product Description</label>
+                            <div class="col-md-8">
+                                <asp:TextBox ID="TextBox2" CssClass="form-control" required placeholder="Enter Product Description" runat="server"></asp:TextBox>
+                    	        
+                            </div>
+                        </div>
+                        <div class="form-group">
+                	        <label class="control-label col-md-3" for="title">Product Price</label>
+                            <div class="col-md-8">
+                                <asp:TextBox ID="TextBox3" CssClass="form-control" required placeholder="Enter Product Price" runat="server"></asp:TextBox>
+                    	        
+                            </div>
+                        </div>
+               
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-3">
+                                <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" 
+                                    Text="Submit" onclick="Button1_Click" />
+                            </div>
+                        </div>
+          
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        
+        <asp:GridView ID="GridView1" runat="server" 
+            CssClass="table table-responsive table-condensed" AutoGenerateColumns="False" 
+            DataKeyNames="id" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" 
+                    ReadOnly="True" SortExpression="id" />
+                <asp:BoundField DataField="category" HeaderText="Category" 
+                    SortExpression="category" />
+                <asp:BoundField DataField="name" HeaderText="Name" SortExpression="name" />
+                <asp:ImageField DataImageUrlField="photo" HeaderText="Image">
+                    <ControlStyle Height="100px" Width="100px" />
+                </asp:ImageField>
+                <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" />
+                <asp:BoundField DataField="description" HeaderText="Description" 
+                    SortExpression="description" />
+                <asp:CommandField ShowDeleteButton="True" />
+            </Columns>
+        </asp:GridView>
+        
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+            DeleteCommand="DELETE FROM [product] WHERE [id] = @id" 
+            InsertCommand="INSERT INTO [product] ([category], [name], [photo], [price], [description]) VALUES (@category, @name, @photo, @price, @description)" 
+            SelectCommand="SELECT * FROM [product]" 
+            UpdateCommand="UPDATE [product] SET [category] = @category, [name] = @name, [photo] = @photo, [price] = @price, [description] = @description WHERE [id] = @id">
+            <DeleteParameters>
+                <asp:Parameter Name="id" Type="Int32" />
+            </DeleteParameters>
+            <InsertParameters>
+                <asp:Parameter Name="category" Type="String" />
+                <asp:Parameter Name="name" Type="String" />
+                <asp:Parameter Name="photo" Type="String" />
+                <asp:Parameter Name="price" Type="String" />
+                <asp:Parameter Name="description" Type="String" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="category" Type="String" />
+                <asp:Parameter Name="name" Type="String" />
+                <asp:Parameter Name="photo" Type="String" />
+                <asp:Parameter Name="price" Type="String" />
+                <asp:Parameter Name="description" Type="String" />
+                <asp:Parameter Name="id" Type="Int32" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
+        
+        </form>
+    </div>
+</div>
+</asp:Content>
+

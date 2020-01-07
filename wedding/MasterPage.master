@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+	<title>Wedding Cards</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/web.css">
+	<link rel="stylesheet" media="all" href="css/style.css">
+  
+</head>
+<body>
+    <header id="header">
+		<div class="container">
+			<a href="Default.aspx" id="logo" title="M.A Jwells">M.A Jwells</a>
+			<div class="right-links">
+				<ul id="im" runat="server">
+                
+                            
+				</ul>
+			</div>
+		</div>
+		<!-- / container -->
+	</header>
+	<!-- / header -->
+
+	<nav id="menu">
+		<div class="container">
+			<div class="trigger"></div>
+			<ul>
+				<li><a href="New.aspx">New collection</a></li>
+                <li><a href="Earing.aspx">Indian Cards</a></li>
+				<li><a href="Necklace.aspx">Scroll Invitations</a></li>
+				<li><a href="Rings.aspx">Theme Cards</a></li>
+                <li><a href="Contact.aspx">Contact Us</a></li>
+			</ul>
+		</div>
+		<!-- / container -->
+	</nav>
+	<!-- / navigation -->
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+   <footer id="footer">
+		<div class="container">
+			<div class="cols">
+				<div class="col">
+					<h3>Frequently Asked Questions</h3>
+					<p>
+                        The Add on items viz. RSVP set, thank you cards, place cards, program cards and booklets, carry bags, menu cards, 
+save the date cards, address labels (transparent and paper stickers) and sweet & chocolate boxes .
+                    </p>
+				</div>
+				<div class="col media">
+					<h3>Social media</h3>
+					<ul class="social">
+						<li><a href="#"><span class="ico ico-fb"></span>Facebook</a></li>
+						<li><a href="#"><span class="ico ico-tw"></span>Twitter</a></li>
+						<li><a href="#"><span class="ico ico-gp"></span>Google+</a></li>
+						<li><a href="#"><span class="ico ico-pi"></span>Pinterest</a></li>
+					</ul>
+				</div>
+				<div class="col contact">
+					<h3>Contact us</h3>
+					<p>Indian Weeding<br>54233 Avenue Street<br>New York</p>
+					<p><span class="ico ico-em"></span><a href="http://www.indianweddingcard.com" target="_blank">contact@indianwedding.com</a></p>
+					<p><span class="ico ico-ph"></span>(590) 423 446 924</p>
+				</div>
+				<div class="col newsletter">
+					<h3>Join our newsletter</h3>
+					<p>Send your Email to Contact with us.</p>
+					<form action="#">
+						<input type="text" placeholder="Your email address...">
+						<button type="submit"></button>
+					</form>
+				</div>
+			</div>
+			<p class="copy">Copyright 2016 Jewellery. All rights reserved.</p>
+		</div>
+		<!-- / container -->
+	</footer>
+	<!-- / footer -->
+
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>	    window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/back-to-top.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
+
+</body>
+</html>

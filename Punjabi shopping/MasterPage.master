@@ -1,0 +1,189 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+	<title>Punjabi Products</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/web.css">
+	<link rel="stylesheet" media="all" href="css/style.css">
+  
+    <style>
+ 
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+
+        li.dropdown {
+            display: inline-block;
+        }
+        li > .dropdown-content {
+            margin-top: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 09;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 160px;
+            padding: 3px 0;
+            margin: 1px 0 0;
+            font-size: 14px;
+            list-style: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0,0,0,0.15);
+            border-radius: 4px;
+            -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+            background-clip: padding-box;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 8px 12px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+		<div class="container">
+			<a href="Default.aspx" id="logo" title="Punjabi Products">Punjabi Products</a>
+			<div class="right-links">
+				<ul id="im" runat="server">
+                  
+				</ul>
+			</div>
+		</div>
+		<!-- / container -->
+	</header>
+	<!-- / header -->
+
+	<nav id="menu">
+		<div class="container">
+			<div class="trigger"></div>
+			<ul>
+            <li><a href="Default.aspx">Home</a></li>
+			    <li class="dropdown">
+                    <a class="dropbtn">Cities & Destinations</a>
+                    <div class="dropdown-content">
+                        <a href="amritsar.aspx">amritsar</a>
+                        <a href="anandpur.aspx">anandpur sahib</a>
+                        <a href="chan.aspx">chandigarh</a>
+                        <a href="haveli.aspx">jalandhar</a>
+                        <a href="kapur.aspx">kapurthala</a>
+                    </div>
+                </li>
+                  <li class="dropdown">
+                    <a class="dropbtn">Travel & Tips</a>
+                    <div class="dropdown-content">
+                        <a href="emer.aspx">emergency number</a>
+                        <a href="hosp.aspx">Hospital in punjab</a>
+                        <a href="rest.aspx">restaurents in punjab</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn">Culture & Festivals</a>
+                    <div class="dropdown-content">
+                        <a href="punj.aspx">Punjabi Culture</a>
+                        <a href="fair.aspx">Fair & Festivals</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn">Punjabi Fashion</a>
+                    <div class="dropdown-content">
+                        <a href="Necklace.aspx">Punjabi Suits</a>
+			           <a href="Earing.aspx">Punjabi Kurti</a>
+			            <a href="Rings.aspx">Punjabi Jutti</a>
+                        <a href="New.aspx">New collection</a>
+                    </div>
+                </li>
+                <li><a href="Contact.aspx">Contact Us</a></li>
+			</ul>
+		</div>
+		<!-- / container -->
+	</nav>
+	<!-- / navigation -->
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+   <footer id="footer">
+		<div class="container">
+			<div class="cols">
+				<div class="col">
+					<h3>Frequently Asked Questions</h3>
+					<ul>
+						<li><a href="#">Fusce eget dolor adipiscing </a></li>
+						<li><a href="#">Posuere nisl eu venenatis gravida</a></li>
+						<li><a href="#">Morbi dictum ligula mattis</a></li>
+						<li><a href="#">Etiam diam vel dolor luctus dapibus</a></li>
+						<li><a href="#">Vestibulum ultrices magna </a></li>
+					</ul>
+				</div>
+				<div class="col media">
+					<h3>Social media</h3>
+					<ul class="social">
+						<li><a href="#"><span class="ico ico-fb"></span>Facebook</a></li>
+						<li><a href="#"><span class="ico ico-tw"></span>Twitter</a></li>
+						<li><a href="#"><span class="ico ico-gp"></span>Google+</a></li>
+						<li><a href="#"><span class="ico ico-pi"></span>Pinterest</a></li>
+					</ul>
+				</div>
+				<div class="col contact">
+					<h3>Contact us</h3>
+					<p>Diana’s Punjabi Product INC.<br>54233 Avenue Street<br>New York</p>
+					<p><span class="ico ico-em"></span><a href="#">contact@punjabi.com</a></p>
+					<p><span class="ico ico-ph"></span>(590) 423 446 924</p>
+				</div>
+				<div class="col newsletter">
+					<h3>Join our newsletter</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium.</p>
+					<form action="#">
+						<input type="text" placeholder="Your email address...">
+						<button type="submit"></button>
+					</form>
+				</div>
+			</div>
+			<p class="copy">Copyright 2017 Punjabi Products. All rights reserved.</p>
+		</div>
+		<!-- / container -->
+	</footer>
+	<!-- / footer -->
+
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script>	    window.jQuery || document.write("<script src='js/jquery-1.11.1.min.js'>\x3C/script>")</script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/back-to-top.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
+
+</body>
+</html>
